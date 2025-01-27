@@ -182,7 +182,7 @@ async function fetchData() {
             const today = new Date();
             const options = { year: "numeric", month: "long", day: "numeric" };
             const currentDate = today.toLocaleDateString("en-US", options);
-            memberShipDate.innerHTML = `Memeber Since ${currentDate}`;
+            memberShipDate.innerHTML = `Member Since ${currentDate}`;
             //set storage for userlogins
             let savedUser = usernameProfile.innerHTML;
             let savedDate = memberShipDate.innerHTML;
