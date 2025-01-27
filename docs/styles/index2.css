@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#holderShadow {
+  -webkit-box-shadow: 0px 1px 11px 5px rgba(224, 221, 224, 1);
+  -moz-box-shadow: 0px 1px 11px 5px rgba(224, 221, 224, 1);
+  box-shadow: 0px 1px 11px 5px rgba(224, 221, 224, 1);
+}
+
+#topBar {
+  border-bottom: 2px solid #fb923c;
+  position: fixed;
+  width: 100%;
+  z-index: 101;
+}
+
+#invis {
+  height: 72px;
+}
+
+/* nav */
+
+#savedNav {
+  border-bottom: 2px solid #fb923c;
+}
+
+#foodSearch {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* //header */
+
+@media (max-width: 639px) {
+  #topp {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+#loginHolder {
+  padding-right: 30px;
+}
+/* profile pic */
+#catProfilePic {
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+}
+
+@media (max-width: 882px) {
+  #mediaProfile {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 882px) {
+  #loginHolder {
+    padding-right: 0px;
+    border-right: 0px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 350px) {
+  #mediaWords {
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 639px) {
+  #invis {
+    height: 170px;
+  }
+}
+
+@media (max-width: 882px) {
+  #invis {
+    height: 155px;
+  }
+}
+
+@media (max-width: 639px) {
+  #invis {
+    height: 269.66px;
+  }
+}
