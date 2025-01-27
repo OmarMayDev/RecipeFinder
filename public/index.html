@@ -3,25 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Saved</title>
-    <link href="./src/output.css" rel="stylesheet" />
-    <link href="styles/index2.css" rel="stylesheet" />
-    <script
-      src="https://kit.fontawesome.com/2816875d84.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <title>Recipes</title>
+    <link href="../src/output.css" rel="stylesheet" />
+    <link href="styles/index.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/2816875d84.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
-  <body>
+  <body class="h-screen bg-[#f5f7fa] overflow-x-hidden ">  
+    <!--popUp That shows saved-->
+    <div id="popUPSave">   
+        <div id="popUpWords">Recipe added to list!</div>
+    </div>
+    <!-- this is the main page -->
     <!-- topBar first -->
     <div class="bg-[white] p-[10px] sm:pb-[20px]" id="topBar">
-      <div class="flex items-center justify-between pl-[20px] pr-[20px] sm:flex-col gap-[10px]" id="topp">
+     
+      <div class="flex items-center justify-between pl-[20px] pr-[20px] gap-[20px]" id="topp">
         <!-- top bar innerContent -->
         <div class="w-[147.36px] hover:cursor-pointer" data-type="logo">
           <img
@@ -31,6 +28,7 @@
             class="w-full"
           />
         </div>
+        
            <!-- nav -->
           <nav class="flex items-center gap-[20px]">
             <div
@@ -68,13 +66,14 @@
         </div>
       </div>
     </div>
-      <div id="invis"></div>
-     <main>
+     <div id="invis"></div>
+    <!--Main-->
+    <main>
       <!--Content Holder-->
       <div class=" pl-[20px] pr-[20px] m-auto max-w-[1110px] pt-[20px]">        
         <div class="flex flex-col gap-[10px] p-[30px] rounded-[20px]  bg-white " id="holderShadow">
-          <div class="text-sm text-[#909BAB]">Recipe Finder / Saved </div>
-          <div class="font-medium text-[28px]">Saved Meals</div>
+          <div class="text-sm text-[#909BAB]">Recipe Finder / Recipes </div>
+          <div class="font-medium text-[28px]">Recipes Search</div>
           <!--Recipie  Flex Holder-->
           <div data-type="recipeFlexHolder" class="flex flex-wrap gap-[15px] " id="recipeHolder">
             <!--popUP-->
@@ -99,6 +98,27 @@
         </div>
       </div>
     </main> 
-    <script src="index2.js"></script>
+    <!--Make a pop up for a sign in page whenver you try to save-->
+    <div id="signUPHolder">
+      <div id="overLay"></div>
+      <form class="flex flex-col gap-[20px] items-center w-[414px] p-[30px] fixed z-[500]" id="fixedSignUP">
+        <div>To save recipes you must sign up</div>
+        <img src="styles/pictures/0100_x3bobb-removebg-preview.png" class="w-[214px] h-[174px]">
+        <div class="flex flex-col gap-[20px] items-center">
+          <input type="text" placeholder="Name" class="w-[330px] h-[48px] rounded-[5px] p-[10px] bg-[#eeeeee] border-none" id="username" required maxlength="20" minlength="2" pattern="[a-zA-Z]+">
+          <input type="email" placeholder="Email" class="w-[330px] h-[48px] rounded-[5px] p-[10px] bg-[#eeeeee] border-none" id="email"required>
+          <input type="password" placeholder="Password" class="w-[330px] h-[48px] rounded-[5px] p-[10px] bg-[#eeeeee] border-none" id="pass"required maxlength="20" minlength="5">
+          <div class="flex flex-col gap-[10px]">
+          <input type="password" placeholder="Confim password" class="w-[330px] h-[48px] rounded-[5px] p-[10px] bg-[#eeeeee] border-none" id="passCon"required maxlength="20" minlength="5">
+          <div id="passNoMatch" class="text-[red] hidden">Passwords do not match.</div>
+        </div>  
+        </div>
+        <button type="submit" class="w-[330px] h-[48px] rounded-[5px] p-[10px] bg-[#fb923c] border-none text-white cursor-pointer">Agree and Register</button>
+        <div class="flex gap-[5px]">Dont wanna sign up? <div class="text-[#fb923c] cursor-pointer" id="continue">Cotinue as guest</div></div>
+      </form>
+    </div>
+
   </body>
+  <script src="index.js"></script>
 </html>
+ 
